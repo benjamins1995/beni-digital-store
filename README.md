@@ -2,6 +2,8 @@
 
 **made with: Angular**
 
+[demo](https://beni-digital-store.vercel.app/)
+
 ## Usage
 
 #
