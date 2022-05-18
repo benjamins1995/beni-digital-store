@@ -1,0 +1,40 @@
+
+<div class="p-2">
+  <p class="fs-3">Cart:</p>
+<div class="cart-item" *ngFor="let item of items">
+<table class="table caption-top ">
+  <caption>
+    <div class="fs-6"><strong><span>{{ item.name }} = </span> <span>{{ item.price | currency }}</span></strong></div>
+  </caption>
+  <tr>
+    <th scope="col"> </th><caption></caption> </tr>
+</table>
+</div>
+
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="address" formControlName="address" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="Check">
+    <label class="form-check-label" for="Check">Check me out</label>
+  </div>
+  
+  <div class="badge bg-secondary text-wrap fs-6" style="width: 6rem;">
+    <a class="text-decoration-none text-white"
+    routerLink="/shipping">Shipping Prices</a>
+  </div>
+
+  <div class="d-grid gap-2 col-2 p-1 mx-auto">
+    <button type="submit" class="btn btn-outline-primary mb-4">Purchase</button>
+</div>
+</form>
+</div>

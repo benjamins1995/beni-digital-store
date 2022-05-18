@@ -1,0 +1,24 @@
+<div class="p-4">
+<p class="fs-2">Product Details:</p>
+
+<div *ngIf="product">
+<table class="table-responsive">
+
+  <tbody class="table-group-divider ">
+    <tr class="fs-4">
+      <th scope="row">name:</th>
+      <td class="ps-5">{{ product.name }}</td>
+    </tr>
+    <tr class="fs-4">
+      <th scope="row">price:</th>
+      <td class="ps-5">{{ product.price | currency }}</td>
+    </tr>
+    <tr class="fs-4">
+      <th scope="row">description:</th>
+      <td class="ps-5" colspan="2">{{ product.description }}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="d-grid gap-2 col-2 p-4 mx-auto">
+  <button type="button" class="btn btn-outline-primary mb-4"(click)="addToCart(product)">Buy</button>
+</div></div></div>

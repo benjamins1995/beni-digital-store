@@ -1,0 +1,12 @@
+<h3 class="fs-3 text-center text-primary" >Shipping Prices</h3>
+
+<div class="p-2">
+  <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+<table class="table caption-top ">
+  <caption>
+    <div class="fs-4"><strong><span>{{ shipping.type }} = </span> <span>{{ shipping.price | currency }}</span></strong></div>
+  </caption>
+  <tr>
+    <th scope="col"> </th><caption></caption> </tr>
+</table>
+</div>

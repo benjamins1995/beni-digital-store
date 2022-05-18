@@ -1,0 +1,15 @@
+<div class="p-5">
+<h1 class="fs-2 "><strong>Products List:</strong></h1>
+<div class="p-2" *ngFor="let product of products">
+<table class="table caption-top ">
+  <caption><div >
+  <a class="text-decoration-none "
+    data-bs-toggle="tooltip"
+    title="Default tooltip"
+    [title]="product.name + ' details'"
+    [routerLink]="['/products', product.id]">
+    <p class="navbar-brand fs-3"><i class="material-icons text-body p-2 fs-6">send</i>{{ product.name }}</p>
+  </a></div></caption><tr>
+    <th scope="col"></th> </tr>
+</table>
+</div></div>
